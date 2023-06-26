@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>ASIAN CONTINENT DETAILS</title>
+    
+</head>
+<body>
+    <h1>HELLO</h1>
+    <h2>THIS IS THE EXAMPLE FOR ARRAY METHODS</h2>
+    <script>
+        console.log("welcome to HTML JS");
+        let req= new XMLHttpRequest();
+        req.open('GET','https://restcountries.com/v3.1/all');
+        req.onload=function(){
+            let data=JSON.parse(req.responseText);
+            for(let i=0;i<data.length;i++){
+                console.log(data[i].flags);
+            }
+        }
+        req.send();
+    </script>
+    
+</body>
